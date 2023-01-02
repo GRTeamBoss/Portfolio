@@ -5,8 +5,17 @@
     --content: '';
 }
 html{
-    font-size: 3vh;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+@media only screen and (min-width: 1081px){
+    html{
+        font-size: 3vh;
+    }
+}
+@media only screen and (max-width: 1080px){
+    html{
+        font-size: 2vh;
+    }
 }
 body{
     margin: 0;
