@@ -12,6 +12,7 @@
     <meta name="keywords" content="GRTEAMBOSS">
     <meta name="keywords" content="@grteamboss">
     <meta name="keywords" content="Jasur Saidov">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <script src="main.js" type="text/javascript"></script>
 </head>
@@ -19,41 +20,41 @@
     <header id="header" class="body__header">
         <aside class="header__aside">
             <h1>
-                <code onclick="reloadPage()">@grteamboss</code>
+                <code onclick="location.reload()">@grteamboss</code>
             </h1>
         </aside>
         <nav class="header__nav">
-            <h2 onclick="locationMove('#biography')">
+            <h2 onclick="location.href = '#biography'">
                 Biography
             </h2>
-            <h2 onclick="locationMove('#study')">
+            <h2 onclick="location.href = '#study'">
                 Study
             </h2>
-            <h2 onclick="locationMove('#works')">
+            <h2 onclick="location.href = '#works'">
                 Works
             </h2>
-            <h2 onclick="locationMove('#contact')">
+            <h2 onclick="location.href = '#contact'">
                 Contact
             </h2>
-            <h2 onclick="locationMove('#about')">
+            <h2 onclick="location.href = '#about'">
                 About
             </h2>
         </nav>
     </header>
-    <h3 id="biography" onclick="scrollTop()">BIOGRAPHY</h3>
+    <h3 id="biography">BIOGRAPHY</h3>
     <section class="body__section">
         <div>
             <p>Hello! My name is Jasur. I am born in Uzbekistan, Tashkent. I went to a school Number of 27 from 1 to 4 school grade include. From 5 to 11 school grade include I went to a school &#127482;&#127480; RSSS(&#127482;&#127487; PMTIDUM). Now I study at 2 year in University(TUIT) named Muhammad al-Xorazmiy.</p>
         </div>
     </section>
-    <h3 id="study" onclick="scrollTop()">STUDY</h3>
+    <h3 id="study">STUDY</h3>
     <section class="body__section">
         <div>
             <p>I learn English, right now I can write, read and listen, but yet not talk with other people.</p>
             <p>I study at home with google where I search interesting facts and youtube where I watch online-courses and random interesting videos which watch me YouTube alghoritms, sometimes I out to walk around 20-40 minutes.</p>
         </div>
     </section>
-    <h3 id="works" onclick="scrollTop()">WORKS</h3>
+    <h3 id="works" onclick="window.scrollTo({'top': 0, 'behavior': 'smooth'})">WORKS</h3>
     <section class="body__section">
         <div>
             <ul>
@@ -72,7 +73,7 @@
             </ul>
         </div>
     </section>
-    <h3 id="contact" onclick="scrollTop()">CONTACT</h3>
+    <h3 id="contact" onclick="window.scrollTo({'top': 0, 'behavior': 'smooth'})">CONTACT</h3>
     <section class="body__section">
         <div>
             <ul>
@@ -80,27 +81,31 @@
                     <p>
                         <strong>Telegram</strong>
                         -
-                        <em onclick="openSite('https://t.me/grteamboss')">@grteamboss</em>
+                        <em class="click" onclick="window.open('https://t.me/grteamboss')">@grteamboss</em>
                     </p>
                 </li>
                 <li>
                     <p>
                         <strong>Instagram</strong>
                         -
-                        <em onclick="openSite('https://www.instagram.com/grteamboss/')">@grteamboss</em>
+                        <em class="click" onclick="window.open('https://www.instagram.com/grteamboss/')">@grteamboss</em>
                     </p>
                 </li>
                 <li>
                     <p>
                         <strong>GitHub</strong>
                         -
-                        <em onclick="openSite('https://github.com/GRTeamBoss')">GRTeamBoss</em>
+                        <em class="click" onclick="window.open('https://github.com/GRTeamBoss')">GRTeamBoss</em>
                     </p>
                 </li>
             </ul>
         </div>
     </section>
-    <h3 id="about" onclick="scrollTop()">ABOUT</h3>
+    <h3 id="about" onclick="window.scrollTo({'top': 0, 'behavior': 'smooth'})">ABOUT</h3>
+    <h3 onclick="window.scrollTo({'top': 0, 'behavior': 'smooth'})">POSTS</h3>
+    <section id="posts" class="body__section">
+        <script async type="text/javascript" src="https://telegram.org/js/telegram-widget.js?21" data-telegram-post="grteambossCodingChannel/3" data-width="100%"></script>
+    </section>
     <footer>
         <main>
             <article><h4>About my works</h4></article>

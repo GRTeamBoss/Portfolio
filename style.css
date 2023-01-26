@@ -133,3 +133,12 @@ body > h3:hover::after{
     color: black;
     box-shadow: -.2vw -.4vh .1vw .2vh gray;
 }
+
+.click {
+    cursor: pointer;
+    transition: all .25s;
+}
+
+.click:hover{
+    box-shadow: 0 .2vh 0 0 blue;
+}
