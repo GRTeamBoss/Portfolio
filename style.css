@@ -1,144 +1,166 @@
-*, *::before, *::after{
-    box-sizing: border-box;
-}
-:root{
-    --content: '';
-}
-html{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-@media only screen and (min-width: 1081px){
-    html{
-        font-size: 3vh;
-    }
-}
-@media only screen and (max-width: 1080px){
-    html{
-        font-size: 2vh;
-    }
-}
-body{
-    margin: 0;
-    padding: 0;
-}
-h1, h2, h3, h4, h5{
-    margin: 0;
-    padding: 0;
-    width: max-content;
-    height: max-content;
-}
-a{
-    width: max-content;
-    height: max-content;
-    text-decoration: none;
-    color: inherit;
-    transition: box-shadow calc(1s/25) linear;
-}
-a:hover{
-    box-shadow: 0 .2vh blue;
-}
-body > h3{
-    display: inherit;
-    position: inherit;
-    cursor: pointer;
-}
-body > h3::after{
-    content: '';
-    background: url('./media/link\(1\).png') right center no-repeat;
-    background-size: contain;
-    display: inline;
-    width: inherit;
-    height: inherit;
-    width: 2vh;
-    height: 2vh;
-    opacity: .2;
-    padding-right: 3vh;
-    margin-left: 1vh;
-}
-body > h3:hover::after{
-    opacity: 1;
-}
-.white{
-    color: white;
-}
-.black{
-    color: black;
-}
-.body__header{
-    display: grid;
-    position: sticky;
-    top: 0;
-    left: 0;
-    grid: 100% / max-content auto;
-    width: 100vw;
-    height: min-content;
-    transition: height 1s linear;
-}
-.header__aside{
-    display: flex;
-    width: initial;
-    justify-content: start;
-    align-items: center;
-    position: initial;
-    padding-left: .5vw;
-    color: white;
-    background-color: black;
-}
-.header__aside > h1{
-    display: block;
-    width: max-content;
-    height: max-content;
-    font-weight: 600;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: text-shadow calc(1s/25) linear;
-}
-.header__aside > h1:hover{
-    text-shadow: -.4vh -.4vh red, .4vh .4vh blue;
-}
-.header__nav{
-    display: grid;
-    grid: 100% / auto auto auto auto auto;
-    grid-column-gap: .75vh;
-    position: initial;
-    background-color: white;
-    justify-content: end;
-    align-items: center;
-    padding-right: 3vh;
-}
-.header__nav > h2{
-    display: initial;
-    width: max-content;
-    height: max-content;
-    color: black;
-    font-variant: small-caps;
-    cursor: pointer;
-    transition: box-shadow calc(1s/25) linear;
-}
-.header__nav > h2:hover{
-    box-shadow: 0 .4vh blue;
-}
-.body__section{
-    display: block;
-    width: initial;
-    height: max-content;
-    margin: .5vw;
-    background-color: lightyellow;
-    color: darkslategray;
-    box-shadow: .2vw .4vh 0 0 black;
-    transition: box-shadow calc(1s/25);
-}
-.body__section:hover{
-    background-color: white;
-    color: black;
-    box-shadow: -.2vw -.4vh .1vw .2vh gray;
-}
+/* For text */
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Open+Sans&family=Source+Sans+Pro&family=Tilt+Neon&display=swap");
+/* For (mac/i/iPad)OS */
+@import url("https://fonts.cdnfonts.com/css/sf-pro-display");
+/* For titles */
+@import url("https://fonts.googleapis.com/css2?family=Monoton&family=Black+Ops+One&family=Bruno+Ace+SC&family=Wallpoet&family=Bungee+Inline&family=Bungee+Shade&display=swap");
+/* For products */
+@import url("https://fonts.googleapis.com/css2?family=Libre+Barcode+39&display=swap");
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  transition: all 0.25s linear;
+}
+:root {
+  --content: "";
+}
+html {
+  font-family: "Inter", "Open Sans", "Source Sans Pro", "Tilt Neon", "Monoton",
+    "Black Ops One", "Bruno Ace SC", "Wallpoet", "Bungee Inline", "Bungee Shade",
+    sans-serif, monospace;
+}
+html {
+  font-size: 16px;
+}
+body {
+  background-image: linear-gradient(
+    to top,
+    rgba(255, 0, 0, 0.1),
+    rgba(0, 0, 255, 0.1)
+  );
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  padding: 0;
+  width: max-content;
+  height: max-content;
+}
+a,
 .click {
-    cursor: pointer;
-    transition: all .25s;
+  width: max-content;
+  height: max-content;
+  text-decoration: none;
+  color: inherit;
+  background: linear-gradient(
+      to right,
+      rgba(100, 200, 200, 1),
+      rgba(100, 200, 200, 0)
+    ),
+    linear-gradient(
+      to right,
+      rgba(255, 0, 0, 1),
+      rgba(255, 0, 180, 1),
+      rgba(0, 0, 255, 1)
+    );
+  background-size: 100% 3px, 0 3px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
 }
-
-.click:hover{
-    box-shadow: 0 .2vh 0 0 blue;
+a:hover,
+.click:hover {
+  background-size: 0 3px, 100% 3px;
+}
+body > h3 {
+  display: inherit;
+  position: inherit;
+  cursor: pointer;
+}
+body > h3::after {
+  content: "";
+  background: url("./media/link\(1\).png") right center no-repeat;
+  background-size: contain;
+  display: inline;
+  width: inherit;
+  height: inherit;
+  width: 1rem;
+  height: 1rem;
+  opacity: 0.2;
+  padding-right: 3vh;
+  margin-left: 1vh;
+}
+body > h3:hover::after {
+  opacity: 1;
+}
+.white {
+  color: white;
+}
+.black {
+  color: black;
+}
+.body__header {
+  display: grid;
+  position: sticky;
+  top: 0;
+  left: 0;
+  grid: 100% / max-content auto;
+  width: 100%;
+  height: min-content;
+  transition: height 1s linear;
+  backdrop-filter: blur(1rem);
+}
+.header__aside {
+  display: flex;
+  width: initial;
+  justify-content: start;
+  align-items: center;
+  position: initial;
+  padding-left: 0.5vw;
+  color: white;
+  background-color: black;
+}
+.header__aside > h1 {
+  display: block;
+  width: max-content;
+  height: max-content;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: text-shadow calc(1s / 25) linear;
+}
+.header__aside > h1:hover {
+  text-shadow: -0.4vh -0.4vh red, 0.4vh 0.4vh blue;
+}
+.header__nav {
+  display: grid;
+  grid: 100% / auto auto auto auto auto;
+  grid-column-gap: 0.75vh;
+  position: initial;
+  background-color: rgba(255, 255, 255, 0.1);
+  justify-content: end;
+  align-items: center;
+  padding-right: 1rem;
+}
+.header__nav > h2 {
+  display: initial;
+  width: max-content;
+  height: max-content;
+  color: black;
+  font-variant: small-caps;
+  cursor: pointer;
+}
+.body__section {
+  display: block;
+  width: initial;
+  height: max-content;
+  margin-inline: 2rem;
+  margin-block: 0.5rem;
+  background-color: wheat;
+  color: black;
+  border: dashed 1px black;
+}
+footer {
+  margin-inline: 2rem;
+}
+footer > main > div {
+  background-color: wheat;
+  border: dashed 1px black;
 }
