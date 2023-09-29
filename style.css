@@ -14,98 +14,81 @@
   margin: 0;
   padding: 0;
   outline: none;
+  text-decoration: none;
   transition: all 0.25s linear;
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --text: #0a0a0a;
+    --background: #fafafa;
+    --primary: #0afa0a;
+    --secondary: #89fa89;
+    --accent: #0a0afa;
+    --footer: #0a0a0a19;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #f5f5f5;
+    --background: #050505;
+    --primary: #f5f505;
+    --secondary: #f5f58f;
+    --accent: #0505f5;
+    --footer: #f5f5f519;
+  }
 }
 :root {
   --content: "";
 }
 html {
-  font-family: "Inter", "Open Sans", "Source Sans Pro", "Tilt Neon", "Monoton",
-    "Black Ops One", "Bruno Ace SC", "Wallpoet", "Bungee Inline", "Bungee Shade",
-    sans-serif, monospace;
-}
-html {
+  font-family: "Inter", "Open Sans", "Source Sans Pro", "Tilt Neon", "Monoton", "Black Ops One", "Bruno Ace SC", "Wallpoet", "Bungee Inline", "Bungee Shade", sans-serif, monospace;
   font-size: 16px;
+  color: var(--text);
 }
 body {
-  background-image: linear-gradient(
-    to top,
-    rgba(255, 0, 0, 0.1),
-    rgba(0, 0, 255, 0.1)
-  );
+  background-color: var(--background);
+}
+a {
+  color: var(--accent);
 }
 h1,
 h2,
 h3,
 h4,
 h5 {
-  margin: 0;
-  padding: 0;
   width: max-content;
   height: max-content;
 }
-a,
-.click {
-  width: max-content;
-  height: max-content;
-  text-decoration: none;
-  color: inherit;
-  background: linear-gradient(
-      to right,
-      rgba(100, 200, 200, 1),
-      rgba(100, 200, 200, 0)
-    ),
-    linear-gradient(
-      to right,
-      rgba(255, 0, 0, 1),
-      rgba(255, 0, 180, 1),
-      rgba(0, 0, 255, 1)
-    );
-  background-size: 100% 3px, 0 3px;
-  background-position: 100% 100%, 0 100%;
-  background-repeat: no-repeat;
-}
-a:hover,
-.click:hover {
-  background-size: 0 3px, 100% 3px;
-}
-body > h3 {
+.section__h3 {
   display: inherit;
   position: inherit;
   cursor: pointer;
 }
-body > h3::after {
+.section__h3::after {
   content: "";
   background: url("./media/link\(1\).png") right center no-repeat;
+  background-color: var(--text);
   background-size: contain;
   display: inline;
-  width: inherit;
-  height: inherit;
   width: 1rem;
   height: 1rem;
-  opacity: 0.2;
-  padding-right: 3vh;
-  margin-left: 1vh;
+  border-radius: 1rem;
+  padding-right: auto;
+  margin-left: 1rem;
 }
-body > h3:hover::after {
-  opacity: 1;
-}
-.white {
-  color: white;
-}
-.black {
-  color: black;
+.section__h3:hover::after {
+  padding-right: 3rem;
 }
 .body__header {
   display: grid;
+  grid: 100% / max-content auto;
   position: sticky;
   top: 0;
   left: 0;
-  grid: 100% / max-content auto;
   width: 100%;
-  height: min-content;
-  transition: height 1s linear;
-  backdrop-filter: blur(1rem);
+  height: min(2rem);
+  background-color: var(--background);
+  border-bottom: solid 1px var(--text);
 }
 .header__aside {
   display: flex;
@@ -114,38 +97,32 @@ body > h3:hover::after {
   align-items: center;
   position: initial;
   padding-left: 0.5vw;
-  color: white;
-  background-color: black;
 }
 .header__aside > h1 {
   display: block;
-  width: max-content;
-  height: max-content;
   font-weight: 600;
   text-transform: uppercase;
   cursor: pointer;
-  transition: text-shadow calc(1s / 25) linear;
 }
 .header__aside > h1:hover {
-  text-shadow: -0.4vh -0.4vh red, 0.4vh 0.4vh blue;
+  background-color: var(--footer);
 }
 .header__nav {
   display: grid;
   grid: 100% / auto auto auto auto auto;
   grid-column-gap: 0.75vh;
   position: initial;
-  background-color: rgba(255, 255, 255, 0.1);
   justify-content: end;
   align-items: center;
   padding-right: 1rem;
 }
 .header__nav > h2 {
   display: initial;
-  width: max-content;
-  height: max-content;
-  color: black;
   font-variant: small-caps;
   cursor: pointer;
+}
+.header__nav > h2:hover {
+  background-color: var(--footer);
 }
 .body__section {
   display: block;
@@ -153,14 +130,14 @@ body > h3:hover::after {
   height: max-content;
   margin-inline: 2rem;
   margin-block: 0.5rem;
-  background-color: wheat;
-  color: black;
-  border: dashed 1px black;
+  padding: 1rem;
+  border-radius: .5rem;
+  background-color: var(--footer);
 }
 footer {
-  margin-inline: 2rem;
-}
-footer > main > div {
-  background-color: wheat;
-  border: dashed 1px black;
+  margin-inline: 5rem;
+  margin-block: 2rem;
+  background-color: var(--footer);
+  padding: 1rem;
+  border-radius: .5rem;
 }
