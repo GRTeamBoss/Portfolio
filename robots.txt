@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /#biography
+Allow: /#study
+Allow: /#works
+Allow: /#contact
+Allow: /#about
+Allow: /#posts
