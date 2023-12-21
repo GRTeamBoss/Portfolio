@@ -59,6 +59,9 @@ h5 {
   width: max-content;
   height: max-content;
 }
+.top_button {
+  display: none;
+}
 .section__h3 {
   display: inherit;
   position: inherit;
@@ -81,7 +84,7 @@ h5 {
 }
 .body__header {
   display: grid;
-  grid: 100% / max-content auto;
+  grid: 1fr / max-content 1fr;
   position: sticky;
   top: 0;
   left: 0;
@@ -92,14 +95,14 @@ h5 {
 }
 .header__aside {
   display: flex;
-  width: initial;
+  width: max-content;
+  height: max-content;
   justify-content: start;
   align-items: center;
   position: initial;
-  padding-left: 0.5vw;
+  padding-left: 1rem;
 }
 .header__aside > h1 {
-  display: block;
   font-weight: 600;
   text-transform: uppercase;
   cursor: pointer;
@@ -135,9 +138,50 @@ h5 {
   background-color: var(--footer);
 }
 footer {
-  margin-inline: 5rem;
+  margin-inline: 2rem;
   margin-block: 2rem;
   background-color: var(--footer);
   padding: 1rem;
   border-radius: .5rem;
+}
+footer > main:nth-child(2) > * {
+  padding-block: .5rem;
+}
+
+@media only screen and (max-width: 1080px) {
+  .body__header {
+    display: grid;
+    grid: max-content 1fr / 1fr;
+    height: max-content;
+    position: relative;
+  }
+  .header__aside {
+    width: 100%;
+    border-bottom: solid 2px #fafafa;
+  }
+  .header__nav {
+    display: grid;
+    grid: 1fr 1fr 1fr 1fr 1fr / 1fr;
+    gap: .125rem;
+    padding: 0;
+    margin-block: 1rem;
+    padding-left: 1rem;
+  }
+  .top_button {
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    font-size: 2rem;
+    text-align: center;
+    border: solid 1px var(--text);
+    border-radius: 1rem;
+    background-color: var(--background);
+    color: var(--text);
+    position: fixed;
+    bottom: 5%;
+    left: 85%;
+  }
+  .section__h3 {
+    margin-inline: auto;
+  }
 }
